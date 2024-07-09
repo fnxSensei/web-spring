@@ -32,9 +32,4 @@ public class ProductsController {
         return "redirect:/catalogue/products/%d".formatted(product.getId());
     }
 
-    @GetMapping("{productId:\\d+}")
-    public String getProduct(@PathVariable("productId") int productId, Model model) {
-        model.addAttribute("product", this.productService.findProduct(productId).orElseThrow());
-        return "catalogue/products/product";
-    }
 }
