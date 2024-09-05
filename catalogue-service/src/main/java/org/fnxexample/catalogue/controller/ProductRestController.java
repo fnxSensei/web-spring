@@ -2,6 +2,9 @@ package org.fnxexample.catalogue.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.fnxexample.catalogue.entity.Product;
+import org.fnxexample.catalogue.payload.UpdateProductPayload;
+import org.fnxexample.catalogue.service.ProductService;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
