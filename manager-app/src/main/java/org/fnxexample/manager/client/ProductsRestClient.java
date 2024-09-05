@@ -1,18 +1,19 @@
-package org.fnxexample.manager.service;
+package org.fnxexample.manager.client;
 
 import org.fnxexample.manager.entity.Product;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface ProductService {
+public interface ProductsRestClient {
+
     List<Product> findAllProducts();
 
     Product createProduct(String title, String details);
 
     Optional<Product> findProduct(int productId);
 
-    void updateProduct(Integer id, String title, String details);
+    void updateProduct(int productId, String title, String details);
 
-    void deleteProduct(Integer id);
+    void deleteProduct(int productId);
 }
